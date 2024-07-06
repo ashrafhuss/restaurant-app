@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import {
+  AboutUs,
+  Chef,
+  FindUs,
+  Footer,
+  Gallery,
+  Header,
+  Intro,
+  Laurels,
+  SpecialMenu,
+} from "./container";
+import {Navbar} from "./components";
+import "./App.css";
+import LeftSidebar from "./LeftSidebar";
+import MainContent from "./MainContent";
+
+const App = () => {
+  const myNAme = "Ashaf";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{scrollbarWidth: "none"}}>
+      <Navbar />
+      <Header />
+      <AboutUs />
+      <SpecialMenu />
+      <Chef />
+      <Intro />
+      <Laurels />
+      <Gallery />
+      <FindUs />
+      <Footer />
+
+      {/* <div className="app_dragged">
+      <LeftSidebar />
+      <MainContent />
+    </div */}
+      {myNAme && <>{myNAme}</>}
     </div>
   );
-}
+};
 
 export default App;
