@@ -7,6 +7,7 @@ import images from "../../constants/images";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  //This nave bar
   return (
     <nav className="app__navbar">
       <div className="app__navbar__logo">
